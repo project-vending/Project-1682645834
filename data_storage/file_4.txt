@@ -1,0 +1,19 @@
+
+import os
+
+# Define file path
+file_path = 'data_storage/file_4.txt'
+
+# Check if file exists
+if os.path.exists(file_path):
+    # Read from file
+    with open(file_path, 'r') as f:
+        file_contents = f.read()
+    print(f'File Contents: {file_contents}')
+else:
+    print(f'Error: File {file_path} does not exist.')
+
+# Write to file
+with open(file_path, 'w') as f:
+    f.write('New content for file_4.txt')
+    print(f'Wrote new content to file {file_path}.')
