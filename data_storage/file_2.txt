@@ -1,0 +1,17 @@
+
+import os
+
+# Define file path
+filepath = 'data_storage/file_2.txt'
+
+# Check if file exists
+if not os.path.exists(filepath):
+    # Create file if it doesn't exist
+    with open(filepath, 'w') as f:
+        f.write('')
+        print(f'Created empty file: {filepath}')
+else:
+    # Open existing file
+    with open(filepath, 'r') as f:
+        content = f.read()
+        print(f'The content of {filepath}:\n{content}')
