@@ -1,0 +1,24 @@
+
+# Import necessary libraries
+import os
+
+# Define file path
+file_path = 'batch_processing/file_2.txt'
+
+# Check if file exists
+if os.path.isfile(file_path):
+    # Open file for reading and writing
+    with open(file_path, 'r+') as f:
+        # Read current contents of file
+        contents = f.read()
+        # Modify contents as desired
+        new_contents = contents + '\nNew data to write to file'
+        # Move file pointer back to beginning of file
+        f.seek(0)
+        # Write new contents to file
+        f.write(new_contents)
+        # Truncate any additional characters that may remain after new contents
+        f.truncate()
+        print(f'Successfully modified file: {file_path}')
+else:
+    print(f'File not found: {file_path}')
