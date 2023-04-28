@@ -1,0 +1,14 @@
+
+# Import required modules
+import os
+
+# Set the filepath of the file to read
+file_path = "batch_processing/file_0.txt"
+
+# Check if file exists before reading its contents
+if os.path.exists(file_path):
+    with open(file_path, "r") as f:
+        file_contents = f.read()
+        print(file_contents)
+else:
+    print(f"No such file found at '{file_path}'")
