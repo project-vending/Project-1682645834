@@ -1,0 +1,9 @@
+python
+import os
+
+folder = "batch_processing"
+filename = os.path.join(folder, "file_4.txt")
+
+with open(filename, "r") as file:
+    contents = file.read()
+    print(contents)
