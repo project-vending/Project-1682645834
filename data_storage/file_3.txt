@@ -1,0 +1,15 @@
+
+import os
+
+# Define file path
+filepath = 'data_storage/file_3.txt'
+
+# Check if file exists
+if os.path.exists(filepath):
+    # Open the file in read mode
+    with open(filepath, 'r') as f:
+        # Read the contents and print
+        contents = f.read()
+        print(contents)
+else:
+    print(f'File {filepath} does not exist')
